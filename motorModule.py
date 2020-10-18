@@ -1,5 +1,6 @@
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
 
 class Motor():
     def __init__(self, In1, In2, En):
