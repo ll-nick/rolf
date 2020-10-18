@@ -1,5 +1,4 @@
 import RPi.GPIO as GPIO
-from time import sleep
 GPIO.setmode(GPIO.BCM)
 
 class Motor():
@@ -13,26 +12,23 @@ class Motor():
         self.pwmA.start(0)
         self.pwmB.start(0)
 
-    def move(self, speed=0.5, t=0):
+    def move(self, speed=0.5):
+        forward = speed >= 0
         # scale normalized speed to value between -100 and 100
         speed *= 100
-        speed = max(speed, -100)
+        speed = abs(speed)
         speed = min(speed, 100)
 
         # forward
-        if speed >= 0:
+        if forward:
             self.pwmA.ChangeDutyCycle(speed)
             GPIO.output(self.In2, GPIO.LOW)
         # backward
         else:
             self.pwmB.ChangeDutyCycle(speed)
             GPIO.output(self.In1, GPIO.LOW)
-                
-        sleep(t)
 
-    def stop(self, t=0):
+    def stop(self):
         # stop motor
         self.pwmA.ChangeDutyCycle(0)
         self.pwmB.ChangeDutyCycle(0)
-
-        sleep(t)
