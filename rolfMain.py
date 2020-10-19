@@ -14,8 +14,13 @@ def main():
     turn = 0
 
     if input == 'Gamepad':
-        speed = -gp.getSpeed()
-        turn = -gp.getTurn()
+        gamepad = gp.getGamepad()
+        if gamepad['R1']:
+            speed = 0
+            turn = 0
+        else:
+            speed = -gamepad['axis3']
+            turn = -gamepad['axis0']
     else:
         forward = kp.getKey('UP')
         backward = kp.getKey('DOWN')

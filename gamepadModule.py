@@ -38,6 +38,9 @@ def getSpeed():
 def getTurn():
     return getGamepad('axis0')
 
+def getStop():
+    return getGamepad('rightStick')
+
 def main():
     print(getGamepad())
     sleep(0.1)
