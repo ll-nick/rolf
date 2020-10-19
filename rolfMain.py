@@ -14,9 +14,8 @@ def main():
     turn = 0
 
     if input == 'Gamepad':
-        speed = gp.getSpeed()
-        turn = gp.getTurn()
-        print(speed)
+        speed = -gp.getSpeed()
+        turn = -gp.getTurn()
     else:
         forward = kp.getKey('UP')
         backward = kp.getKey('DOWN')
@@ -36,7 +35,7 @@ def main():
         else:
             turn = 0
 
-    rolf.move(speed, turn, 0.1)
+    rolf.move(speed, turn)
 
 if __name__ == '__main__':
     while True:
