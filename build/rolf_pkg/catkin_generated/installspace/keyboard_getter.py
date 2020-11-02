@@ -1,15 +1,15 @@
 #!/usr/bin/env python2
 
 import rospy
-from std_msgs.msg import String
+from rolf_pkg.msg import ControlRequest
 import keyPressModule as kp
 
 def readKeyboard():
-    pub = rospy.Publisher('chatter', String, queue_size=10)
+    pub = rospy.Publisher('rolf/control_request', ControlRequest, queue_size=10)
     rospy.init_node('keyboard_getter', anonymous=True)
-    rate = rospy.Rate(10) # 10hz
+    rate = rospy.Rate(100)
     kp.init()
-
+    msg = ControlRequest()
     while not rospy.is_shutdown():
         forward = kp.getKey('UP')
         backward = kp.getKey('DOWN')
@@ -34,9 +34,11 @@ def readKeyboard():
                 turn = -1
             else:
                 turn = 0
-        
-        outstr = "Speed: " + speed + ", Turn: " + turn
-        pub.publish(outstr)
+
+        msg.header.stamp = rospy.Time.now()
+        msg.speed = speed
+	msg.turn = turn
+        pub.publish(msg)
         rate.sleep()
 
 if __name__ == '__main__':
