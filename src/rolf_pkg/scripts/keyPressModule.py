@@ -1,8 +1,9 @@
 import pygame
+import os
 
 def init():
     pygame.init()
-    win = pygame.display.set_mode((100,100))
+    win = pygame.display.set_mode((1,1))
 
 def getKey(keyName):
     ans = False

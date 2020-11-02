@@ -1,0 +1,8 @@
+prefix=/home/pi/rolf/install
+
+Name: rolf_pkg
+Description: Description of rolf_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
