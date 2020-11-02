@@ -89,6 +89,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rolf_pkg" TYPE PROGRAM FILES "/home/pi/rolf/build/rolf_pkg/catkin_generated/installspace/motor_driver.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rolf_pkg" TYPE PROGRAM FILES "/home/pi/rolf/build/rolf_pkg/catkin_generated/installspace/keyboard_getter.py")
 endif()
 

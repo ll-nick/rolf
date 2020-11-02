@@ -23,6 +23,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/pi/rolf/src/rolf_pkg/CMakeLists.txt"
   "/home/pi/rolf/src/rolf_pkg/package.xml"
   "/home/pi/rolf/src/rolf_pkg/scripts/keyboard_getter.py"
+  "/home/pi/rolf/src/rolf_pkg/scripts/motor_driver.py"
   "/opt/ros/melodic/share/catkin/cmake/all.cmake"
   "/opt/ros/melodic/share/catkin/cmake/assert.cmake"
   "/opt/ros/melodic/share/catkin/cmake/atomic_configure_file.cmake"
