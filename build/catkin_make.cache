@@ -1,2 +1,0 @@
-rolf_pkg
--DCATKIN_DEVEL_PREFIX=/home/pi/rolf/devel -DCMAKE_INSTALL_PREFIX=/home/pi/rolf/install -G Unix Makefiles
