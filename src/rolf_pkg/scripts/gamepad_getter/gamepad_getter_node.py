@@ -10,13 +10,12 @@ def readGamepad():
     rate = rospy.Rate(100)
     msg = ControlRequest()
     while not rospy.is_shutdown():
-        gamepad = gp.getGamepad()
-        if gamepad['R1']:
+        if gp.getStop():
             speed = 0
             turn = 0
         else:
-            speed = -gamepad['axis3']
-            turn = -gamepad['axis2']
+            speed = gp.getSpeed()
+            turn = gp.getTurn()
 
         msg.header.stamp = rospy.Time.now()
         msg.speed = speed

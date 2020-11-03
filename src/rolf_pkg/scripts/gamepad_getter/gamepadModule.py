@@ -33,13 +33,13 @@ def getGamepad(name = ''):
         return buttons[name]
 
 def getSpeed():
-    return getGamepad('axis3')
+    return -getGamepad('axis3')
 
 def getTurn():
-    return getGamepad('axis2')
+    return -getGamepad('axis2')
 
 def getStop():
-    return getGamepad('rightStick')
+    return getGamepad('R1')
 
 def main():
     print(getGamepad())
