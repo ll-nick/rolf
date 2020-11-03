@@ -160,8 +160,9 @@ include_directories(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
  catkin_install_python(PROGRAMS
-   scripts/motor_driver.py
-   scripts/keyboard_getter.py
+   scripts/motor_driver/motor_driver_node.py
+   scripts/keyboard_getter/keyboard_getter_node.py
+   scripts/gamepad_getter/gamepad_getter_node.py
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
  )
 
