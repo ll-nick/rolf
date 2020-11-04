@@ -1,0 +1,9 @@
+<launch>
+
+<arg name="config" default="$(find rolf_pkg)/launch/params/object_follow_params.yaml" />
+
+<node pkg="rolf_pkg" type="object_follow_node" name="object_follow_node" output="screen">
+<rosparam command="load" file="$(arg config)" subst_value="true" />
+</node>
+
+</launch>
