@@ -163,6 +163,7 @@ include_directories(
    scripts/motor_driver/motor_driver_node.py
    scripts/keyboard_getter/keyboard_getter_node.py
    scripts/gamepad_getter/gamepad_getter_node.py
+   scripts/object_detection/follow_object_node.py
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
  )
 

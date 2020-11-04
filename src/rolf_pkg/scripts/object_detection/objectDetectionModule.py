@@ -4,7 +4,7 @@ import os
 classNames= []
 fileLocation = os.path.dirname(__file__)
 classFile = fileLocation + '/coco.names'
-print(classFile)
+
 with open(classFile,'rt') as f:
     classNames = f.read().rstrip('\n').split('\n')
 
