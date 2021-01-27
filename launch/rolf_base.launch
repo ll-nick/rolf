@@ -1,4 +1,7 @@
 <launch>
+    <env name="ROS_IP" value="192.168.0.99"/>
+    <env name="ROS_MASTER_URI" value="http://raspberrypi:11311"/>
+
     <!-- Camera -->
     <include file="$(find raspicam_node)/launch/camerav2_1280x720.launch"/>
 
