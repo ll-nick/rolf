@@ -1,0 +1,7 @@
+<launch>
+    <!-- Camera -->
+    <include file="$(find raspicam_node)/launch/camerav2_1280x720.launch"/>
+
+    <!-- Motor Driver -->
+    <node pkg="rolf_pkg" type="motor_driver_node.py" name="motor_driver" output="screen"/>
+</launch>
