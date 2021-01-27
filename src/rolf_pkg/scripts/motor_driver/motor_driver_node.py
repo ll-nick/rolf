@@ -16,3 +16,4 @@ def motorDriver():
 
 if __name__ == '__main__':
     motorDriver()
+    rolf.move(1, 0)

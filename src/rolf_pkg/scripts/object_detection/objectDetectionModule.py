@@ -39,7 +39,7 @@ if __name__ == "__main__":
     img = cv2.imread(fileLocation + '/test_images/office-desk.jpg', cv2.IMREAD_UNCHANGED)
     cv2.imshow('image',img)
     cv2.waitKey(0)
-    result,objectInfo = getObjects(img,0.5,0.2,objects=['keyboard'])
+    result,objectInfo = getObjects(img,0.5,0.1,objects=['keyboard'])
     #print(objectInfo)
     cv2.imshow("Output", result)
     cv2.waitKey(0)
